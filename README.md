@@ -6,4 +6,4 @@ Dependencies:
 - node.js
 - homebridge
 - node-omxplayer https://www.npmjs.com/package/node-omxplayer
-- cec-promise
+- hdmi-cec https://www.npmjs.com/package/hdmi-cec
