@@ -1,0 +1,35 @@
+{
+    "name": "homebridge-hdmi-player",
+    "version": "0.1",
+    "description": "Exposes a homebridge accessory that allows a TV to be turned on or off via HDMI-CEC and a stream via omxplayer",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "homebridge-plugin",
+      "homebridge",
+      "hdmi",
+      "hdmi-cec",
+      "omxplayer"
+    ],
+    "author": "Blake Cormier",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bec128/homebridge-hdmi-player.git"
+    },
+    "bugs": {
+      "url": "https://github.com/bec128/homebridge-hdmi-player/issues"
+    },
+    "homepage": "https://github.com/bec128/homebridge-hdmi-player",
+    "engines": {
+      "node": ">=0.12.0",
+      "homebridge": ">=0.2.0"
+    },
+    "dependencies": {
+      "node-omxplayer": "^0.6.1",
+      "hdmi-cec": "^0.2.8"
+    }
+  }
+  
