@@ -65,8 +65,8 @@ hdmiPlayer.prototype = {
     },
     getState: function(callback){
         this.log("GetState called")
-        let tvPower = getTvPowerState();
-        let streamPlaying = getOmxStreamStatus();
+        let tvPower = this.getTvPowerState();
+        let streamPlaying = this.getOmxStreamStatus();
         let state = false;
         if (tvPower && streamPlaying) {
             state = true;
