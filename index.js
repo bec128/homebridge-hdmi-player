@@ -22,7 +22,7 @@ hdmiPlayer.prototype = {
         this.infoService = new Service.AccessoryInformation();
         this.infoService.setCharacteristic(Characteristic.Manufacturer, "Blake Cormier");
         this.infoService.setCharacteristic(Characteristic.Model, "Raspi HDMI Streamer");
-        this.initService.setCharacteristic(Characteristic.SerialNumber, "999999");
+        this.infoService.setCharacteristic(Characteristic.SerialNumber, "999999");
         
         this.cec = new cecControl.Commander();
         this.player = new omx();
@@ -84,6 +84,9 @@ hdmiPlayer.prototype = {
     getOmxStreamStatus: function() {
         this.log("GetOmxStreamStatus called")
         return this.player.running;
+    },
+    getServices: function() {
+        return [this.infoService, this.playerService];
     }
 
-}
+};
