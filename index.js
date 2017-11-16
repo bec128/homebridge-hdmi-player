@@ -33,12 +33,12 @@ hdmiPlayer.prototype = {
     },
     setTvPowerState: function(state) {
         //valid options: cecControl.PowerStatus.ON, STANDBY
-        let tvPowerState = cec.setPowerState(state);
+        let tvPowerState = this.cec.setPowerState(state);
         this.log("TV Power State: " + tvPowerState);
         return tvPowerState;
     },
     getTvPowerState: function() {
-        return cec.getPowerState();
+        return this.cec.getPowerState();
     },
     handleStateChange: function(state,callback){
         this.log("handleStateChange called")
