@@ -1,6 +1,6 @@
 {
     "name": "homebridge-hdmi-player",
-    "version": "0.1",
+    "version": "0.0.1",
     "description": "Exposes a homebridge accessory that allows a TV to be turned on or off via HDMI-CEC and a stream via omxplayer",
     "main": "index.js",
     "scripts": {
