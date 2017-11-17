@@ -39,7 +39,15 @@ hdmiPlayer.prototype = {
         return tvPowerState;
     },
     getTvPowerState: function() {
-        return this.cec.getPowerState();
+        let tvPower;
+        try {
+            tvPower = this.cec.getPowerState();
+            this.log("TV Power State: tvPower");
+        } catch(err) {
+            this.log("Error: getTVPowerState: " + err.message);
+            tvPower = false;
+        }
+        return tvPower;
     },
     handleStateChange: function(state,callback){
         this.log("handleStateChange called")
