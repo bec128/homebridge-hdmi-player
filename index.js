@@ -23,7 +23,8 @@ hdmiPlayer.prototype = {
         this.infoService.setCharacteristic(Characteristic.Manufacturer, "Blake Cormier");
         this.infoService.setCharacteristic(Characteristic.Model, "Raspi HDMI Streamer");
         this.infoService.setCharacteristic(Characteristic.SerialNumber, "999999");
-        
+        this.cecMonitor = new cecControl.CecMonitor();
+        this.cecMonitor.start();
         this.cec = new cecControl.Commander();
         this.player = new omx();
 
