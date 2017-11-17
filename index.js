@@ -25,7 +25,7 @@ hdmiPlayer.prototype = {
         this.infoService.setCharacteristic(Characteristic.SerialNumber, "999999");
         this.cecMonitor = new cecControl.CecMonitor();
         this.cecMonitor.start();
-        this.cec = new cecControl.Commander();
+        this.cec = new cecControl.Commander(this.cecMonitor);
         this.player = new omx();
 
         this.playerOn = this.playerService.getCharacteristic(Characteristic.On);
